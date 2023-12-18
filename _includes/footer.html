@@ -1,9 +1,135 @@
+
+<!-- 
 <footer class="pt-5 my-5 text-muted border-top">
   <div class="row">
     <div class="col-md-6 text-end social-media-icons">
       {% for item in site.data.settings.social %}
-        <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
+        <a href="{{ item.link }}" target="blank" class="ms-5 fs-5">
+          {% if item.image %}
+            <img src="{{ site.github.url }}/assets/{{ item.image }}" width="22" height="22">
+          {% else %}
+            <i class="fab fa-{{ item.icon }}"></i>
+          {% endif %}
+        </a>
       {% endfor %}
+    </div>
+  </div>
+</footer>
+ -->
+
+
+ <!-- <footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-6 text-center social-media-icons">
+      {% for item in site.data.settings.social %}
+        {% if item.icon %}
+          <a href="{{ item.link }}" class="ms-3 fs-5"><i class="fab fa-{{ item.icon }}"></i></a>
+        {% endif %}
+        
+        {% if item.image %}
+          <a href="{{ item.link }}" class="ms-3 fs-5"><img src="{{ site.github.url }}/assets/{{ item.image }}" width="22" height="22" style="margin-left: 5px;"></a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</footer> -->
+
+<!-- 
+<style>
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-media-icons a {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  .social-media-icons i,
+  .social-media-icons img {
+    width: 22px;
+    height: 22px;
+  }
+</style>
+
+<footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-6 text-center social-media-icons">
+      {% for item in site.data.settings.social %}
+        <a href="{{ item.link }}" class="ms-3 fs-5">
+          {% if item.icon %}
+            <i class="fab fa-{{ item.icon }}"></i>
+          {% endif %}
+          
+          {% if item.image %}
+            <img src="{{ site.github.url }}/assets/{{ item.image }}">
+          {% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</footer> -->
+
+<style>
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* 将图标容器的高度设置为与父元素一样 */
+  }
+
+  .social-media-icons a {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+  }
+
+  .social-media-icons i,
+  .social-media-icons img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* 添加底部定位样式 */
+  .footer-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  /* 添加垂直居中样式 */
+  .social-media-icons {
+    transform: translateY(-50%);
+  }
+</style>
+
+<footer class="pt-5 my-5 text-muted border-top">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <div class="social-media-icons">
+        {% for item in site.data.settings.social %}
+          <a href="{{ item.link }}" class="ms-3 fs-5">
+            {% if item.icon %}
+              <i class="fab fa-{{ item.icon }}"></i>
+            {% endif %}
+
+            {% if item.image %}
+              <img src="{{ site.github.url }}/assets/{{ item.image }}" width="22" height="22">
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <!-- 底部定位容器 -->
+  <div class="row footer-bottom">
+    <div class="col-md-12">
     </div>
   </div>
 </footer>

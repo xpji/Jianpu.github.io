@@ -8,17 +8,9 @@ body a {
   color: #212529 !important;
 }
 
-/*# sourceMappingURL=main.css.map */
-
-/* 新增的自定义图标样式 */
-.fa-custom-icon::before {
-  content: '\fXXX'; /* 请替换XXX为 FontAwesome 图标的 Unicode 代码 */
-  color: #ff0000; /* 设置图标颜色为红色，可以根据需要修改颜色 */
-  font-size: 24px; /* 设置图标大小，可以根据需要修改大小 */
+.fa-github:after {
+  content: none;
 }
-
-/* 修改社交媒体图标的样式 */
-.social-media-icons a {
-  margin-right: 10px; /* 修改社交媒体图标之间的右边距 */
-  /* 添加其他样式修改，根据需要进行修改 */
+.social-media-icons .fab.fa-github {
+  text-decoration: none;
 }
