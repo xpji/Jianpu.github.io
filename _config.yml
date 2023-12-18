@@ -56,3 +56,4 @@ plugins:
 assets:
   sources:
     - _assets/js
+permalink: /:categories/:title/

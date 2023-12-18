@@ -5,8 +5,19 @@ menu:
 
 blog:
 - {title: 'Create site with jekyll', image: 'blog/img/jekyll.png', url: 'Create_site_with_jekyll'}
+
 research:
 - {title: 'MRG introduction', image: 'research/img/MRG.png', url: 'MRG'}
+
+
+social:
+- {icon: 'github',link: 'https://github.com/xpji'}
+- { link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343',image: 'csdn.ico'}
+
+contacts:
+- {name: 'Jianpu', title: 'PhD. candidate', department: 'Atmosphere & ocean', institution: 'HOhai University', institution_address: 'No. 1, Xikang Road, Nanjing City, Jiangsu Province', 
+email: 'XpJi@hhu.edu.cn', office: 'Electrical Building 304', image: 'assets/img/tree.jpg'}
+
 
 # research:
 # - {title: 'MRG', image: 'research/img/MRG.png', url: 'MRG'}
@@ -16,11 +27,6 @@ research:
 # - {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
 # - {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
 # - {title: 'Graduate Student', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
-
-social:
-- {icon: 'github',link: 'https://github.com/xpji'}
-- { link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343',image: 'csdn.ico'}
-
-contacts:
-- {name: 'Jianpu', title: 'PhD. candidate', department: 'Atmosphere & ocean', institution: 'HOhai University', institution_address: 'No. 1, Xikang Road, Nanjing City, Jiangsu Province', 
-email: 'XpJi@hhu.edu.cn', office: 'Electrical Building 304', image: 'assets/img/tree.jpg'}
+# - {icon: 'instagram', link: 'https://instagram.com/paululele'}
+# - {icon: 'linkedin', link: 'https://linkedin.com/in/lenpaul'}
+# - {icon: 'custom-icon', link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343'}

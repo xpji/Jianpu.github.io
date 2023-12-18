@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Create_site_with_jekyll"
+tags: Jekyll
 time: ""
 ---
 
@@ -55,7 +56,9 @@ jekyll new --skip-bundle .
 
 运行`bundel install`命令
 
-![Alt text](./img/image.png)
+![cat](https://raw.githubusercontent.com/xpji/Jianpu.github.io/jianpu_pages/blog/img/image.png)
+
+
 
 ### 7、测试网页
 打开`_config.yml`文件，修改url为自己的github的网页
@@ -68,7 +71,6 @@ baseurl: /REPOSITORY-NAME/      # place folder name if the site is served in a s
 
 ```
 在本地测试自己的网页：
-
 
 ```bash
 git add .
@@ -94,7 +96,7 @@ git push -u origin gh-pages
 
 推送成功后，打开你的远程仓库，点击设置-Pages，在Branch下面选择你刚刚提交的分支，点击save，稍等几分钟后就可以看见你的网页啦
 
-![Alt text](./img/image-2.png)
+![pages](https://raw.githubusercontent.com/xpji/Jianpu.github.io/jianpu_pages/blog/img/image-2.png)
 
 
 
