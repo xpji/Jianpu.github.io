@@ -20,9 +20,6 @@ research:
 social:
 - {icon: 'github',link: 'https://github.com/xpji'}
 - { link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343',image: 'csdn.ico'}
-# - {icon: 'instagram', link: 'https://instagram.com/paululele'}
-# - {icon: 'linkedin', link: 'https://linkedin.com/in/lenpaul'}
-# - {icon: 'custom-icon', link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343'}
 
 contacts:
 - {name: 'Jianpu', title: 'PhD. candidate', department: 'Atmosphere & ocean', institution: 'HOhai University', institution_address: 'No. 1, Xikang Road, Nanjing City, Jiangsu Province', 
