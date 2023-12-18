@@ -56,8 +56,7 @@ jekyll new --skip-bundle .
 
 运行`bundel install`命令
 
-![cat](https://raw.githubusercontent.com/xpji/Jianpu.github.io/jianpu_pages/blog/img/image.png)
-
+![cat][https://raw.githubusercontent.com/xpji/Jianpu.github.io/jianpu_pages/blog/img/image.png]
 
 
 ### 7、测试网页
