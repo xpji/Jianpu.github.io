@@ -46,3 +46,13 @@ highlighter: pygments
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+# _config.yml
+
+# 添加 highlight.js 和 clipboard.js
+plugins:
+  - jekyll-assets
+  - jekyll-seo-tag
+
+assets:
+  sources:
+    - _assets/js
