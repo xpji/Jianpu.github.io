@@ -1,23 +1,21 @@
 menu:
-- {name: 'blog', url: '/blog'}
-# - {name: 'people', url: '/people'}
-# - {name: 'publications', url: '/publications'}
-# - {name: 'courses', url: '/courses'}
-# - {name: 'cv', url: '/cv'}
-- {name: 'contact', url: '/contact'}
+- {name: 'Blog', url: '/blog'}
+- {name: 'Research', url: '/research'}
+- {name: 'Contact', url: '/contact'}
+
 blog:
-# - {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
-# - {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
-- {title: 'AI', image: 'assets/img/graduate-student.jpg', url: 'AI'}
+- {title: 'Create site with jekyll', image: 'blog/img/jekyll.png', url: 'Create_site_with_jekyll'}
+research:
+- {title: 'MRG introduction', image: 'research/img/MRG.png', url: 'MRG'}
+
+# research:
+# - {title: 'MRG', image: 'research/img/MRG.png', url: 'MRG'}
+
+# - {title: 'AI', image: 'assets/img/graduate-student.jpg', url: 'AI'}
 # people:
 # - {name: 'Primary Investigator', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/primary-investigator.jpg', url: 'primary-investigator'}
 # - {name: 'Lab Technician', title: 'Researcher', department: 'Physics & Astronomy', institution: 'Some University', institution_address: '1 Main Street, Canada', phone: '(000) 000-0000', email: 'hello@university.edu', office: 'Science Building 505', image: 'assets/img/lab-technician.jpg', url: 'lab-technician'}
 # - {title: 'Graduate Student', image: 'assets/img/graduate-student.jpg', url: 'graduate-student'}
-
-# courses:
-# - {name: 'Vector Calculus', url: 'vector-calculus'}
-# - {name: 'Quantum Mechanics', url: 'quantum-mechanics'}
-# - {name: 'Stellar Structures', url: 'stellar-structures'}
 
 social:
 - {icon: 'github', link: 'https://github.com/xpji'}
@@ -28,4 +26,4 @@ social:
 
 contacts:
 - {name: 'Jianpu', title: 'PhD. candidate', department: 'Atmosphere & ocean', institution: 'HOhai University', institution_address: 'No. 1, Xikang Road, Nanjing City, Jiangsu Province', 
-email: 'XpJi@hhu.edu.cn', office: 'Electrical Building 304', image: 'assets/img/contact.jpg'}
+email: 'XpJi@hhu.edu.cn', office: 'Electrical Building 304', image: 'assets/img/tree.jpg'}

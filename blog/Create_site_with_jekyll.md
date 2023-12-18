@@ -1,86 +1,67 @@
+---
+layout: page
+title: "Create_site_with_jekyll"
+time: ""
+---
 
 
 
+### 1、打开一个终端
 
+打开 `git bash`
 
-# 使用jekyll来创建一个网页
-
-## 1、打开一个终端
-
-打开git bash
-
-## 2、创建一个空的文件夹
+### 2、创建一个空的文件夹
 
 
 文件夹名称如：`blog`
 
 
-```bash
+
+```
 mkdir blog
 cd blog
 ```
 
-## 3、初始化一个git仓库
+### 3、初始化一个git仓库
 
 使用自己的仓库的名字
 
-```bash
+```
 git init REPOSITORY-NAME
 ```
 
 
-## 4、从新的分支上发布你的网页
+### 4、从新的分支上发布你的网页
 
 
 
 从`gh-pages`这个分支发布你的网页：
 
-```bash
-$ git checkout --orphan gh-pages
+```
+git checkout --orphan gh-pages
 # Creates a new branch, with no history or contents, called gh-pages, and switches to the gh-pages branch
-$ git rm -rf .
+git rm -rf .
 # Removes the contents from your default branch from the working directory
 ```
 
-## 5、使用 `jekyll new` 创建新的网页
-```bash
-$ jekyll new --skip-bundle .
+### 5、使用 `jekyll new` 创建新的网页
+```
+jekyll new --skip-bundle .
 ```
 
 
-## 6、打开创建后生成的Gemfile这个文件夹
+### 6、打开创建后生成的Gemfile这个文件夹
 
-注释掉：`gem "jekyll"` 这一句内容，
-
-添加并编辑`gem "github-pages"`开头的内容为：
-
-
-```bash
-gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
-```
-这里注意更换对应的GitHub-pages版本，可以在这里查找到：
-https://pages.github.com/versions/
-
-比如，我这里修改为：
-
-```bash
-gem "github-pages", "~> 228", group: :jekyll_plugins
-```
-
-![Alt text](./change.png)
-
-
-保存修改后的文件
 
 运行`bundel install`命令
 
-![Alt text](./image.png)
+![Alt text](./img/image.png)
 
-## 7、测试网页
+### 7、测试网页
 打开`_config.yml`文件，修改url为自己的github的网页
 
 
-```bash
+```
 domain: my-site.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://my-site.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /REPOSITORY-NAME/      # place folder name if the site is served in a subfolder
@@ -89,7 +70,7 @@ baseurl: /REPOSITORY-NAME/      # place folder name if the site is served in a s
 在本地测试自己的网页：
 
 
-```bash
+```
 git add .
 git commit -m 'Initial GitHub pages site with Jekyll'
 ```
@@ -97,45 +78,45 @@ git commit -m 'Initial GitHub pages site with Jekyll'
 
 连接你的远程仓库，这里注意替换为你自己的仓库名称：
 
-```bash
+```
  git remote add origin https://github.com/USER/REPOSITORY.git
 ```
 
 
 推送你修改的内容到远程仓库：
 
-```bash
+```
 git push -u origin gh-pages
 ```
 
 
-## 8、更新Github
+### 8、更新Github
 
 推送成功后，打开你的远程仓库，点击设置-Pages，在Branch下面选择你刚刚提交的分支，点击save，稍等几分钟后就可以看见你的网页啦
 
-![Alt text](./image-2.png)
+![Alt text](./img/image-2.png)
 
 
 
-## 9、选择一个jekyll主题
+### 9、选择一个jekyll主题
 
 打开你的`Gemfile`文件,将下面的内容添加进去：
 
 
-```bash
+```
 gem "academic-jekyll-theme"
 ```
 
 添加保存后，打开你的`_config.yml`文件，修改theme后面的内容：
 
-```bash
+```
 theme: academic-jekyll-theme
 ```
 运行`bundel`
 
 如果说版本不符合的话，可以尝试直接安装：
 
-```bash
+```
 gem install academic-jekyll-theme
 ```
 
@@ -143,22 +124,27 @@ gem install academic-jekyll-theme
 
 https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll
 
-## 10、上传到远程仓库
+在本地显示网页：
+```
+bundle exec jekyll serve
+```
 
-```shell
+### 10、上传到远程仓库
+
+```
 git add .
 ```
 
-```shell
+```
 git commit -m 'Initial GitHub pages site with Jekyll'
 ```
 
-```shell
+```
 # 修改为你自己的仓库地址
 git remote add origin https://github.com/USER/REPOSITORY.git
 ```
 
-```shell
+```
 # 推送到你指定的分支上
 git push -u origin BRANCH
 ```

@@ -9,3 +9,17 @@
 ## 本地预览博客
 
 bundle exec jekyll serve
+
+## 创建一个新的分类
+
+切记需要在文件夹内添加一个markdown的模板，如果你添加的子分类为research，markdown模块内容如下所示:
+
+
+
+\---
+
+layout: research
+
+title: "research"
+
+\---
