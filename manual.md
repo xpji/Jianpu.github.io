@@ -5,3 +5,7 @@
 ## 修改对应小标题如blog的页面显示内容
 
 在_layouts\blog.html进行修改
+
+## 本地预览博客
+
+bundle exec jekyll serve
