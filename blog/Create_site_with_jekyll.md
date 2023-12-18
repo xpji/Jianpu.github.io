@@ -56,9 +56,7 @@ jekyll new --skip-bundle .
 
 运行`bundel install`命令
 
-![cat](https://raw.githubusercontent.com/xpji/Jianpu.github.io/jianpu_pages/blog/img/image.png)
-
-
+![image.png](E:/picgo/imga_copy/LaRItkhmpAPSWCw.png)
 
 ### 7、测试网页
 打开`_config.yml`文件，修改url为自己的github的网页
@@ -96,9 +94,7 @@ git push -u origin gh-pages
 
 推送成功后，打开你的远程仓库，点击设置-Pages，在Branch下面选择你刚刚提交的分支，点击save，稍等几分钟后就可以看见你的网页啦
 
-![pages](https://raw.githubusercontent.com/xpji/Jianpu.github.io/jianpu_pages/blog/img/image-2.png)
-
-
+![image-2.png](E:/picgo/imga_copy/aizMxWNhJR4rfV2.png)
 
 ### 9、选择一个jekyll主题
 
