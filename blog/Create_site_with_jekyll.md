@@ -1,8 +1,9 @@
 ---
-layout: page
-title: "Create_site_with_jekyll"
-tags: Jekyll
-time: ""
+layout: post
+title: "Create site with Jekyll"
+categories: [Jekyll, Tutorial]
+image: 'blog/img/jekyll.png'
+url: 'Create_site_with_jekyll'
 ---
 
 

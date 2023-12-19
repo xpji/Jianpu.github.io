@@ -17,4 +17,14 @@ layout: default
     <img src="{{ site.github.url }}/{{ blog.image }}" alt="Contact" width="100%">
   </div>
 </div>
+
+
+<ul>
+  {% for category in site.categories %}
+    <li><a href="{{ site.github.url }}/blog/{{ blog.url }}">{{ category | first }}</a></li>
+  {% endfor %}
+</ul>
+  
+
 {% endfor %}
+
