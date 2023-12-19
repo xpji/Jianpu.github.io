@@ -56,10 +56,7 @@ jekyll new --skip-bundle .
 
 运行`bundel install`命令
 
-
-
 ![cat](https://s2.loli.net/2023/12/18/LaRItkhmpAPSWCw.png)
-
 ### 7、测试网页
 打开`_config.yml`文件，修改url为自己的github的网页
 
