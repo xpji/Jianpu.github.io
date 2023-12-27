@@ -10,8 +10,7 @@ url: 'Map_add_figure'
 
 当我们进行WRF数值模拟时，通过会使用矩形框突出显示模拟的区域，这样有利于读者对你模拟的区域有更清晰的认知。这个时候，就可以尝试使用地图嵌套的展示方式。这里以普通的地图嵌套进行讲解，以python来进行实现。效果图如下所示：
 
-![ShangHai_map_add.png](https://s2.loli.net/2023/12/27/LHkNucnJSAeOfyV.png)
-
+<img src="https://s2.loli.net/2023/12/27/LHkNucnJSAeOfyV.png" alt="ShangHai_map_add" style="max-width: 100%; height: auto;">
 
 
 主要技术难点：
@@ -115,7 +114,9 @@ ax.yaxis.set_major_formatter(LatitudeFormatter())
 ```
 运行上述代码，应该会得到如下的地图：
 
-![ShangHai_map_1.png](https://s2.loli.net/2023/12/27/B1cISnoRXKdY7hm.png)
+
+
+<img src="https://s2.loli.net/2023/12/27/B1cISnoRXKdY7hm.png" alt="ShangHai_map_1.png" style="max-width: 100%; height: auto;">
 
 
 ## 子图嵌套
@@ -148,7 +149,10 @@ mpatches.ConnectionPatch((line_x[0], line_y[0]), (line_x[0], line_y[1]),
 
 完成以上设置后，将其作为一个patch添加到地图上，即完成了一条跨越两个子图的连接,展示效果如下所示：
 
-![ShangHai_map_2.png](https://s2.loli.net/2023/12/27/2hUk9GzrpfPFK1i.png)
+
+
+<img src="https://s2.loli.net/2023/12/27/2hUk9GzrpfPFK1i.png" alt="ShangHai_map_2.png" style="max-width: 100%; height: auto;">
+
 
 然后，根据自己的需求添加连接线的数量即可。
 
@@ -328,4 +332,3 @@ ax2.tick_params(which='major', direction='in',pad=8)
 # fig.savefig('./ShangHai_map_add.png',bbox_inches='tight',dpi=300 )
 
 ```
-
