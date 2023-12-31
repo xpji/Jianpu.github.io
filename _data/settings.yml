@@ -7,6 +7,7 @@ blog:
 - {title: 'Create site with jekyll', image: 'blog/img/jekyll.png', url: 'Create_site_with_jekyll'}
 - {title: 'python-地图上嵌入子图', image: 'blog/img/ShangHai_map_add.png', url: 'Map_add_figure'}
 - {title: 'Description of namelist variables',  image: 'blog/img/WRF.png', url: 'Description of namelist variables'}
+- {title: 'WRF--修改geo_em.d01.nc中的变量',  image: blog/img/modify_geo.png,url: 'Modify_geo_em'}
 
 research:
 - {title: 'MRG introduction', image: 'research/img/MRG.png', url: 'MRG'}
@@ -14,7 +15,7 @@ research:
 
 social:
 - {icon: 'github',link: 'https://github.com/xpji'}
-- { link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343',image: 'csdn.ico'}
+- {link: 'https://blog.csdn.net/weixin_44237337?spm=1000.2115.3001.5343',image: 'csdn.ico'}
 
 contacts:
 - {name: 'Jianpu', title: 'PhD. candidate', department: 'Atmosphere & ocean', institution: 'HOhai University', institution_address: 'No. 1, Xikang Road, Nanjing City, Jiangsu Province', 
