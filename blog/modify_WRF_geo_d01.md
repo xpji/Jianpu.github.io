@@ -3,7 +3,7 @@ layout: post
 title: "WRF--修改geo_em.d01.nc中的变量"
 categories: [WRF,Tutorial]
 image: 'blog/img/WRF.png'
-url: 'Modify_geo_em'
+url: 'modify_WRF_geo_d01'
 ---
 
 
