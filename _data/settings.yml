@@ -6,7 +6,7 @@ menu:
 blog:
 - {title: 'Create site with jekyll', image: 'blog/img/jekyll.png', url: 'Create_site_with_jekyll'}
 - {title: 'python-地图上嵌入子图', image: 'blog/img/ShangHai_map_add.png', url: 'Map_add_figure'}
-
+- {title: 'Description of namelist variables',  image: 'blog/img/WRF.png', url: 'Description of namelist variables'}
 
 research:
 - {title: 'MRG introduction', image: 'research/img/MRG.png', url: 'MRG'}
