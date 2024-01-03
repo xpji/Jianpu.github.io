@@ -1,13 +1,25 @@
 ---
 layout: post
 title:  "Run WRF with GFS data!"
-date:   2023-12-17 18:12:25 +0800
+author: "Jianpu"
+date:   2024-01-03 19:48
 categories: WRF
 tags: [WRF,GFS]
+image: 1.webp
 ---
 # 使用GFS数据驱动WRF模式
 
+
+
+
+
 ## Down GFS data 
+
+
+
+
+
+
 
 
 

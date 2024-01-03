@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<!doctype html>
+<html>
   {% include head.html %}
   <body>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
+    <div class="container">
       {% include header.html %}
-      {{ content }}
+      <div class="content-container">
+        {{ content }}
+      </div>
       {% include footer.html %}
     </div>
   </body>

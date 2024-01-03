@@ -2,28 +2,32 @@
 layout: default
 ---
 
-<div class="row g-5 mb-5">
-  <div class="col-md-6">
-    <h3 class="fw-bold">Research</h3>
-
-    <div class="col-md-6">
-      <div style="white-space: nowrap;">Mixed Rossby and Gravity(MRG) waves ideal case</div>
-      <p><a href="{{ site.github.url }}/research/{{ research.url }}">More info</a></p>
-    </div>
+{% for post in paginator.posts %}
+  <div class="posts-container">
+    <h1>
+      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+    </h1>
+    {% if post.image %}
+      <div class="thumbnail-container">
+        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+      </div>
+    {% endif %}
+    <p>
+      {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+      <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+    </p>
   </div>
-  <div class="col-md-6">
-    <img src="{{ site.github.url }}/assets/img/MRG_uv.png" alt="Home" width="100%">
-  </div>
+{% endfor %}
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
+  {% else %}
+    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+  {% else %}
+    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
+  {% endif %}
 </div>
-
-
-<!-- {% include blog.html %}
-
-<div class="row g-5 mb-5">
-  <div class="col-md-12">
-    <h3 class="fw-bold border-bottom pb-3 mb-5">Updates</h3>
-    {% for post in site.posts %}
-      <p><a href="{{ site.github.url }}/{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%B %-d, %Y" }}</p>
-    {% endfor %}
-  </div>
-</div> -->
