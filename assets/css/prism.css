@@ -33,9 +33,10 @@ pre[class*="language-"] {
 /* Code blocks */
 pre[class*="language-"] {
 	padding: 1em;
-	margin: .5em 0;
+	margin: .5em .5em .5em 0;
 	overflow: auto;
 	border-radius: 0.3em;
+	width: 110%;
 }
 
 :not(pre) > code[class*="language-"],
@@ -126,7 +127,7 @@ pre[class*="language-"] {
 
 pre[class*="language-"].line-numbers {
 	position: relative;
-	padding-left: 3.8em;
+	padding-left: 2em;
 	counter-reset: linenumber;
 }
 
@@ -141,7 +142,7 @@ pre[class*="language-"].line-numbers > code {
 	top: 0;
 	font-size: 100%;
 	left: -3.8em;
-	width: 3em; /* works for line-numbers below 1000 lines */
+	width: 6em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
 	border-right: 1px solid #999;
 
@@ -161,7 +162,7 @@ pre[class*="language-"].line-numbers > code {
 			content: counter(linenumber);
 			color: #999;
 			display: block;
-			padding-right: 0.8em;
+			padding-right: 0.6em;
 			text-align: right;
 		}
 
