@@ -179,10 +179,10 @@ Environmental Information：https://www.ngdc.noaa.gov/mgg/global/relief/ETOPO2/E
 ![](https://www.pygmt.org/v0.3.0/_images/sphx_glr_earth-relief_001.png)
 
 
-![](https://www.pygmt.org/v0.3.0/_images/sphx_glr_earth-relief_005.png)
+<!-- ![](https://www.pygmt.org/v0.3.0/_images/sphx_glr_earth-relief_005.png)
 
 
-![](https://www.pygmt.org/v0.3.0/_images/sphx_glr_earth-relief_006.png)
+![](https://www.pygmt.org/v0.3.0/_images/sphx_glr_earth-relief_006.png) -->
 
 ## 全部代码
 

@@ -8,9 +8,9 @@ layout: default
 {% if page.image %}
   <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
 {% endif %}
-<!-- <article> -->
-  <!-- {{ content }} -->
-<!-- </article> -->
+<article>
+  {{ content }}
+</article>
 {% if site.hide_post_date != true %}
   {% include post-date.html %}
 {% endif %}
@@ -23,3 +23,6 @@ layout: default
 {% if site.data.settings.disqus.comments %}
   {% include disqus.html %}
 {% endif %}
+
+<link href="{{ site.github.url }}/assets/css/prism.css" rel="stylesheet" />
+<script src="{{ site.github.url }}/assets/js/prism.js"></script>
