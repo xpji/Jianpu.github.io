@@ -11,7 +11,7 @@ PhD. candidate | Atmosphere & ocean
 
 Location: | Hohai University |   No. 1, Xikang Road, Nanjing City, Jiangsu Province, 210098
 
-Email:    | xianpu_ji2024@outlook.com
+Email:    | Xianpu_JI2024@outlook.com
 
 Office:   | Electrical Building 304
 
