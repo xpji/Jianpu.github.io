@@ -2,6 +2,9 @@
 layout: default
 ---
 
+<!-- 引入 jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 {% for post in paginator.posts %}
   <div class="posts-container">
     <h1>
@@ -23,6 +26,9 @@ layout: default
   </div>
 {% endfor %}
 
+<!-- 引入 update_views.js -->
+<script src="{{ site.github.url }}/assets/js/update_views.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- Pagination links -->
 <div class="pagination">
   {% if paginator.next_page %}
@@ -36,5 +42,3 @@ layout: default
     <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
   {% endif %}
 </div>
-<!-- <link href="{{ site.github.url }}/assets/css/prism.css" rel="stylesheet" />
-<script src="{{ site.github.url }}/assets/js/prism.js"></script> -->
