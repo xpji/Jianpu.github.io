@@ -23,7 +23,15 @@ layout: default
 {% if site.data.settings.disqus.comments %}
   {% include disqus.html %}
 {% endif %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-DGMSK4G2XJ');
+</script>
 <link href="{{ site.github.url }}/assets/css/prism.css" rel="stylesheet" />
 <script src="{{ site.github.url }}/assets/js/prism.js"></script>
 <script src="{{ site.github.url }}/assets/js/update_view.js"></script>
