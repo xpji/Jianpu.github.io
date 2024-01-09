@@ -7,6 +7,7 @@ categories: WRF
 tags: [WRF,GFS]
 image: 1.webp
 views: 0
+comments: true
 ---
 # 使用GFS数据驱动WRF模式
 

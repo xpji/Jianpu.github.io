@@ -1,4 +1,6 @@
 <head>
+
+  
   <meta name="google-site-verification" content="Mtodw0_Kwe7AtdgDwgSxzsd86bmCpR2W6k4Uf_l8FPQ" />
   <title>
     {% if page.title == "Home" %}
@@ -29,7 +31,14 @@
       });
   </script>
   <!-- Google Analytics -->
-  {% include google-analytics.html %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DGMSK4G2XJ');
+  </script>
   <!-- Use Jekyll SEO plugin -->
   {% seo %}
 </head>

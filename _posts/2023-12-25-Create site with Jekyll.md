@@ -7,6 +7,7 @@ categories: Blog
 tags: [Jekyll,blog]
 image: 6.jpg
 views: 0
+comments: true
 ---
 
 

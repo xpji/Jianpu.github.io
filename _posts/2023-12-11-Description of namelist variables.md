@@ -7,6 +7,7 @@ categories: WRF
 tags: [WRF,namelist.input]
 image: 5.jpg
 views: 0
+comments: true
 ---
 
 
