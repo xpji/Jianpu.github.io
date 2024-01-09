@@ -8,6 +8,14 @@
         {{ content }}
       </div>
       {% include footer.html %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-DGMSK4G2XJ');
+      </script>
     </div>
   </body>
 </html>
@@ -15,11 +23,3 @@
 <script src="{{ site.github.url }}/assets/js/prism.js"></script> -->
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DGMSK4G2XJ');
-</script>
