@@ -5,7 +5,7 @@ author: "Jianpu"
 date:   2023-12-11 12:48
 categories: WRF
 tags: [WRF,namelist.input]
-image: 5.jpg
+image: forest.jpg
 views: 0
 comments: true
 ---
@@ -14,7 +14,7 @@ comments: true
 
 
 ---------------------------------
- 
+
 For WRF-NMM users, please see Chapter 5 of the WRF-NMM User's Guide for 
 information on NMM specific settings (http://www.dtcenter.org/wrf-nmm/users)
 

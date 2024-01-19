@@ -5,7 +5,7 @@ author: "Jianpu"
 date:   2023-12-25 19:00
 categories: Blog
 tags: [Jekyll,blog]
-image: 6.jpg
+image: home.jpg
 views: 0
 comments: true
 ---
