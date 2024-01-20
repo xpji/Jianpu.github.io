@@ -40,7 +40,7 @@ gfs.t00z.pgrb2.1p00.f006                     17-Feb-2022 03:39   43M
 
 使用**downthemall** 批量下载：
 
-![image-20220225164054792](https://gitee.com/jianpucom/picture/raw/master/202202251641728.png)
+![202202251641728.png](https://s2.loli.net/2024/01/20/tMmcwJu5hdjgnsp.png)
 
 
 
@@ -66,7 +66,7 @@ cd  /Users/WRF/WPS/
 
 成功后在该文件下应该会出现一个vtable的文件
 
-![image-20220225172308492](https://gitee.com/jianpucom/picture/raw/master/202202251723566.png)
+![image.png](https://s2.loli.net/2024/01/20/2TGvIwAcl8o6PDs.png)
 
 下面几步操作还是在WPS路径下
 
@@ -74,11 +74,11 @@ cd  /Users/WRF/WPS/
 
 打开namelist.wps进行编辑，把时间改成你数据对应的时间范围：
 
-![image-20220225172600869](https://gitee.com/jianpucom/picture/raw/master/202202251726915.png)
+![image.png](https://s2.loli.net/2024/01/20/8nTLZFw5AecpS3C.png)
 
 运行`./ungrib.exe`命令，显示如下表示成功
 
-![image-20220225172708174](https://gitee.com/jianpucom/picture/raw/master/202202251727238.png)
+![image.png](https://s2.loli.net/2024/01/20/A76aIVbRgxKE5Mf.png)
 
 ### 3、geogrid
 
@@ -108,17 +108,16 @@ cd  /Users/WRF/WPS/
 
 `ncl util/plotgrids_new.ncl`   
 
-![image-20220225231754022](https://gitee.com/jianpucom/picture/raw/master/image-20220225231754022.png)
+![image.png](https://s2.loli.net/2024/01/20/Z4Dg5ypFhursIok.png)
 
 
 
 确认好区域位置后，进行`geogrid`，运行命令：`./geogrid.exe`，运行成功显示如下内容：
 
-![image-20220225232037085](https://gitee.com/jianpucom/picture/raw/master/image-20220225232037085.png)
-
+![image.png](https://s2.loli.net/2024/01/20/xfH4hbl6GViOeIP.png)
 同时，你会得到如下文件：
 
-![image-20220225232100244](https://gitee.com/jianpucom/picture/raw/master/image-20220225232100244.png)
+![image.png](https://s2.loli.net/2024/01/20/ogdvewUP7nGEVtI.png)
 
 ### 4、Metgrid
 
@@ -126,11 +125,11 @@ cd  /Users/WRF/WPS/
 
 `./metgrid.exe`
 
-![image-20220225232333579](https://gitee.com/jianpucom/picture/raw/master/image-20220225232333579.png)
+![image.png](https://s2.loli.net/2024/01/20/YLfyuZ9QOlqAWUR.png)
 
 同时会得到相应插值后的nc格式的文件：
 
-![image-20220225232413818](https://gitee.com/jianpucom/picture/raw/master/image-20220225232413818.png)
+![image.png](https://s2.loli.net/2024/01/20/5jlvqsWOo6pgwed.png)
 
 以上，WPS前处理完成。下面进行WRF处理。
 
@@ -207,17 +206,17 @@ cd  /Users/WRF/WPS/
 
 编辑好之后，确保与WPS前处理中的namelist.wps中的保证一致后，运行命令：`./real.exe`
 
-![image-20220225233725399](https://gitee.com/jianpucom/picture/raw/master/image-20220225233725399.png)
+![image.png](https://s2.loli.net/2024/01/20/cA3KbuOnoi7mf4C.png)
 
 同时，会得到如下三个文件：
 
-![image-20220225233757565](https://gitee.com/jianpucom/picture/raw/master/image-20220225233757565.png)
+![image.png](https://s2.loli.net/2024/01/20/DEuPTsGMfWA6XrC.png)
 
 ### 运行./wrf.exe
 
 之后，运行`wrf.exe`，生成以下文件表示成功
 
-![image-20220226163941686](https://gitee.com/jianpucom/picture/raw/master/image-20220226163941686.png)
+![image.png](https://s2.loli.net/2024/01/20/5n1akpGtBz7UZQy.png)
 
 ### Note：
 
@@ -229,6 +228,6 @@ cd  /Users/WRF/WPS/
 
 对跑出来的数据进行验证，检验区域是否正确。使用`ncview`进行查看：
 
-![image-20220226163848832](https://gitee.com/jianpucom/picture/raw/master/image-20220226163848832.png)
+![image.png](https://s2.loli.net/2024/01/20/XYOrVw3LxZhoU4C.png)
 
 可以发现，与之间使用`ncl命令`查看的区域是一致的

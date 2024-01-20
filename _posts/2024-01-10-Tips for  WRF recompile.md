@@ -29,7 +29,8 @@ https://github.com/wrf-model/WRF/blob/master/phys/module_radiation_driver.F
 ## 编译的次序
 
 - 当您重新编译时，您是仅仅编译，还是进行了`clean-a`，然后重新配置(configure)，然后重新编译(compile)？
-![Alt text](image.png)
+
+![image.png](https://s2.loli.net/2024/01/20/qDAXiLePRdvy5Sl.png)
 
 - 对于物理参数的修改，不需要clean/configure。您可以直接编译，而且通常比原始的完整编译更快。
 

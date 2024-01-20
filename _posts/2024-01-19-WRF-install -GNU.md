@@ -9,7 +9,7 @@ image: 10.jpg
 views: 0
 comments: true
 ---
-## **Add something similar to .bashrc
+## Add something similar to .bashrc
 
 \*Note you will need to modify the paths for your specific environment.
 \*Note this includes a setting to the path for “DIR.” This is just for the sake of simplifying installation.**

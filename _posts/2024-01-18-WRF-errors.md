@@ -19,7 +19,7 @@ comments: true
 
 ## error1：**Mismatch Landmask ivgtyp**
 
-![image-20240118133535070](img/image-20240118133535070.png)
+![image-20240118133535070.png](https://s2.loli.net/2024/01/20/8PTVzIWXamnoU3G.png)
 
 Symptoms:
 
@@ -193,7 +193,7 @@ Solutions:
 
 Symptoms：
 
-![image-20240118135041462](img/image-20240118135041462.png)
+![image-20240118135041462.png](https://s2.loli.net/2024/01/20/uQqZUPJRgKpdXsf.png)
 
 - While running real.exe generates messages such as : namelist  : num_metgrid_soil_levels =      2. input files : NUM_METGRID_SOIL_LEVELS =      0 (from met_em files). Mismatch between namelist and global attribute NUM_METGRID_SOIL_LEVELS
 
@@ -211,7 +211,7 @@ Solutions:
 
 Symptoms：
 
-![image-20240118135335542](img/image-20240118135335542.png)
+![image-20240118135335542.png](https://s2.loli.net/2024/01/20/rcyYLBGQ1OtzVpk.png)
 
 - While running ./metgrid.exe generates messages such as : **Missing values encountered in interpolated fields. Stopping.**
 
@@ -242,7 +242,7 @@ Solutions:
 
 Symptoms：
 
-![img](img/538fbc8a62e297ad34f42a965533cfd1.jpg)
+![538fbc8a62e297ad34f42a965533cfd1.jpg](https://s2.loli.net/2024/01/20/UJKxE7Ta2QhRIgN.jpg)
 
 
 
@@ -265,7 +265,7 @@ Solutions:
 
 - 4. set **w_damping = 1**  in your namelist.input below :&dynamics
 
--    5.Try typing in the terminal: setenv MP_STACK_SIZE64000000 (OMP_STACKSIZE)
+- 5. Try typing in the terminal: setenv MP_STACK_SIZE64000000 (OMP_STACKSIZE)
 
 - If you are using csh or tcsh, try the following: **limit stacksizeunlimited**
 - If you use sh or bash, use the following command: **ulimit -s unlimited**
