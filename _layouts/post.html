@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <style>
   /* 添加这个样式以移除边框 */
   .panel-group,
@@ -14,35 +13,29 @@ layout: default
   /* 样式调整，使文章内容呈现在左边 */
   #content-wrapper {
     display: flex;
+    flex-wrap: wrap; /* Allow content to wrap to the next line on small screens */
   }
 
   #main-content {
-    flex: 1;
-    padding-right: 40px; /* 添加右边距，防止内容与右侧导航栏重叠 */
+    flex: 1; /* Take up remaining space */
+    max-width: 100%;
   }
 
   #side-nav {
-    position: fixed;
-    top: 60%;
-    right: 2;
-    transform: translateY(-50%);
-    background-color: rgba(248, 249, 250, 0.9);
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px;
-    overflow: auto;
+    max-width: 100%;
   }
 
   #side-nav a {
     display: block;
     margin-bottom: 10px;
-    max-width: 100ch;
+    max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     padding-left: 15px;
   }
 </style>
+
 
 <div id="content-wrapper">
   <div id="main-content">
@@ -96,13 +89,30 @@ layout: default
   $(function() {
     $("#side-nav").resizable({
       handles: "e",
-      minWidth: 300
+      minWidth: 100
     });
   });
 </script>
 
 <!-- 其余代码保持不变 -->
 
+<style>
+  /* 添加响应式样式 */
+  @media (max-width: 768px) {
+    #content-wrapper {
+      flex-direction: column; /* Stack items vertically on small screens */
+    }
+
+    #side-nav {
+      width: 100%; /* Make the side nav take full width on small screens */
+      max-width: none;
+    }
+
+    #main-content {
+      max-width: 100%; /* Adjust main content width on small screens */
+    }
+  }
+</style>
 
 
 {% if site.hide_post_date != true %}
@@ -121,14 +131,14 @@ layout: default
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script> 
 
-
+<!-- 
 
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-DGMSK4G2XJ');</script> 
+  gtag('config', 'G-DGMSK4G2XJ');</script>  -->
 
 
 
