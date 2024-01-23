@@ -55,7 +55,8 @@ layout: default
               {% for sub_post in sub_category_posts %}
                 <!-- 显示子分类下的文章标题和链接 -->
                 <li class="list-group-item" style="padding-left: 2rem;">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+               
                 </li>
               {% endfor %}
             {% endfor %}
@@ -67,7 +68,7 @@ layout: default
             {% for post in posts_of_category %}
               <!-- 显示当前分类下的文章标题和链接 -->
               <li class="list-group-item" style="padding-left: 2rem;">
-                <a href="{{ post.url }}">{{ post.title }}</a>
+                <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
               </li>
             {% endfor %}
           </ul>
