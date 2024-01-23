@@ -55,7 +55,7 @@ layout: default
               {% for sub_post in sub_category_posts %}
                 <!-- 显示子分类下的文章标题和链接 -->
                 <li class="list-group-item" style="padding-left: 2rem;">
-                  <a href="{{ sub_post.url }}">{{ sub_post.title }}</a>
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </li>
               {% endfor %}
             {% endfor %}
