@@ -3,7 +3,7 @@ layout: post
 title:  "Run WRF with GFS data!"
 author: "Jianpu"
 date:   2024-01-03 19:48
-categories: WRF
+category: WRF
 tags: [WRF,GFS]
 image: 1.webp
 views: 0

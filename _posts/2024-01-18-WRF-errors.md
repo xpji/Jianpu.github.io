@@ -3,7 +3,7 @@ layout: post
 title:  "WRF errors!"
 author: "Jianpu"
 date:   2024-01-18 13:38
-categories: WRF
+category: WRF
 tags: [WRF]
 image: 9.jpg
 views: 0

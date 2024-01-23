@@ -3,7 +3,7 @@ layout: post
 title:  "WRF install with Intel!"
 author: "Jianpu"
 date:   2024-01-20 13:38
-categories: WRF
+category: WRF
 tags: [WRF]
 image: 11.jpg
 views: 0

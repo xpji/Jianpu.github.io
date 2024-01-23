@@ -2,7 +2,7 @@
 layout: post
 title: "matplotlib skills"
 author: Jianpu
-categories: Python
+category: Python
 tags: [matplotlib]
 image: 16.jpg
 date: 2024-01-22 20:36

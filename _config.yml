@@ -18,7 +18,7 @@ markdown:            kramdown
 highlighter:         rouge
 permalink: /:categories/:title/
 
-plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag,jekyll-toc]
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'Jianpu'
@@ -32,3 +32,10 @@ google_analytics: G-DGMSK4G2XJ
 
 disqus:
 shortname: https-github-com-xpji-jianpu-github-io
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      toc: true
+

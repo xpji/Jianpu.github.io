@@ -3,7 +3,7 @@ layout: post
 title:  "Description of namelist variables"
 author: "Jianpu"
 date:   2023-12-11 12:48
-categories: WRF
+category: WRF
 tags: [WRF,namelist.input]
 image: forest.jpg
 views: 0

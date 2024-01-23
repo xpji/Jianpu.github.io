@@ -3,7 +3,7 @@ layout: post
 title:  "WRF install with GNU!"
 author: "Jianpu"
 date:   2024-01-19 13:38
-categories: WRF
+category: WRF
 tags: [WRF]
 image: 10.jpg
 views: 0

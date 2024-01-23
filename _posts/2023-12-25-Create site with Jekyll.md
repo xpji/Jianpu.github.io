@@ -3,7 +3,7 @@ layout: post
 title:  "Create site with Jekyll"
 author: "Jianpu"
 date:   2023-12-25 19:00
-categories: Blog
+category: Blog
 tags: [Jekyll,blog]
 image: home.jpg
 views: 0

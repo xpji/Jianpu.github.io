@@ -3,7 +3,7 @@ layout: post
 title:  "Quick WRF compilation after modifying some parameters!"
 author: "Jianpu"
 date:   2024-01-10 13:48
-categories: WRF
+category: WRF
 tags: [WRF]
 image: 7.jpg
 views: 0

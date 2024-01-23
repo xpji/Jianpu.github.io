@@ -1,38 +1,78 @@
 ---
 layout: default
 ---
-<!--
-  这里是 category_index.html 文件，里面使用到的一些 DOM 结构依赖 pizn.me 的样式。但您可以只参考里面的 jekyll 语法就好。这里的作用是显示出 category 分类列表。
--->
-<section class="content fn-clear">
-	<div class="content-cnt">
-    <div class="ui-grid-25 ui-grid-right content-top">
-            <section class="ui-grid-19 violet-post">
-                <div class="v-section-tit">
-                	<a href="/" rel="nofollow" >Home</a>
-                    <span>&#9830;</span>
-                    <a href="/archives.html" rel="nofollow" >Archives</a>
-                    <span>&#9830;</span>
-                    <h2>Category:&nbsp;&nbsp{{ page.category }}</h2>
-                </div>
-                {% for post in site.categories.[page.category] %}
-                <div class="violet-archive fn-clear">
-                	<p class="ui-grid-2 year">{{ post.date | date: '%Y' }}</p>
-                	<div class="ui-grid-17 ui-grid-right ui-grid-bottom">
-                		<article class="article fn-clear">
-                            <div class="ui-grid-6 v-archive-tit">
-                                <p class="v-date"><span>&#8227;</span><time pubdate="{{ post.date | date: '%b %d, %Y' }}">{{ post.date | date: '%b %d' }}</time></p>
-                                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                            </div>
-                            <div class="ui-grid-11 v-archive-det">
-                                <p>{{ post.description }}</p>
-                            </div>
-                        </article><!-- //archive -->
-                	</div>
-            	</div>
-            	{% endfor %}                            
-            </section><!-- //violet-post -->
-            {% include aside.html %}
+
+<!-- 添加这个样式以移除边框 -->
+<style>
+  .panel-group,
+  .panel,
+  .panel-heading,
+  .list-group-item {
+    border: none;
+  }
+</style>
+
+{% assign sort_categories = site.categories | sort %}
+
+{% for category in sort_categories %}
+  {% assign category_name = category | first %}
+  {% assign posts_of_category = category | last %}
+  {% assign first_post = posts_of_category[0] %}
+
+  {% if category_name == first_post.categories[0] %}
+    {% assign sub_categories = "" %}
+    {% for post in posts_of_category %}
+      {% if post.categories.size > 1 %}
+        {% assign sub_categories = sub_categories | append: post.categories[1] | append: "|" %}
+      {% endif %}
+    {% endfor %}
+
+    {% assign sub_categories = sub_categories | split: "|" | uniq %}
+    {% assign sub_categories_size = sub_categories | size %}
+
+    <!-- 创建 Bootstrap 面板组 -->
+    <div class="panel-group">
+      <!-- 创建 Bootstrap 面板 -->
+      <div class="panel panel-default">
+        <!-- 面板标题 -->
+        <div class="panel-heading" id="{{ category_name }}">
+          <i class="far fa-folder"></i>&nbsp;
+          {{ category_name }}&nbsp;
+          <!-- 显示该分类下的文章数量 -->
+          {% assign top_posts_size = posts_of_category | size %}
+          <span class="text-muted small">
+            {{ top_posts_size }} post{% if top_posts_size > 1 %}s{% endif %}
+          </span>
         </div>
-	</div>
-</section><!-- //content -->
+
+        {% if sub_categories_size > 0 %}
+        <!-- 如果有子分类，创建折叠面板 -->
+        <div id="grp_{{ category_name }}" class="panel-collapse collapse">
+          <!-- 列出子分类下的文章 -->
+          <ul class="list-group">
+            {% for sub_category in sub_categories %}
+              {% assign sub_category_posts = site.categories[sub_category] %}
+              {% for sub_post in sub_category_posts %}
+                <!-- 显示子分类下的文章标题和链接 -->
+                <li class="list-group-item" style="padding-left: 2rem;">
+                  <a href="{{ sub_post.url }}">{{ sub_post.title }}</a>
+                </li>
+              {% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% else %}
+          <!-- 如果没有子分类，列出当前分类下的文章 -->
+          <ul class="list-group">
+            {% for post in posts_of_category %}
+              <!-- 显示当前分类下的文章标题和链接 -->
+              <li class="list-group-item" style="padding-left: 2rem;">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}

@@ -3,7 +3,7 @@ layout: post
 title:  "WRF calculate e_sn/e_we/ i_parent_start/ j_parent_start!"
 author: "Jianpu"
 date:   2024-01-24 13:38
-categories: WRF
+category: WRF
 tags: [WRF]
 image: 15.jpg
 views: 0

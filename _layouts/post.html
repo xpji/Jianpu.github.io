@@ -2,15 +2,109 @@
 layout: default
 ---
 
-<h1>
-  {{ page.title }}
-</h1>
-{% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
-{% endif %}
-<article>
-  {{ content }}
-</article>
+<style>
+  /* 添加这个样式以移除边框 */
+  .panel-group,
+  .panel,
+  .panel-heading,
+  .list-group-item {
+    border: none;
+  }
+
+  /* 样式调整，使文章内容呈现在左边 */
+  #content-wrapper {
+    display: flex;
+  }
+
+  #main-content {
+    flex: 1;
+    padding-right: 40px; /* 添加右边距，防止内容与右侧导航栏重叠 */
+  }
+
+  #side-nav {
+    position: fixed;
+    top: 60%;
+    right: 2;
+    transform: translateY(-50%);
+    background-color: rgba(248, 249, 250, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    overflow: auto;
+  }
+
+  #side-nav a {
+    display: block;
+    margin-bottom: 10px;
+    max-width: 100ch;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 15px;
+  }
+</style>
+
+<div id="content-wrapper">
+  <div id="main-content">
+    <h1>{{ page.title }}</h1>
+    {% if page.image %}
+      <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
+      {% include toc.html html=content %}
+    {% endif %}
+
+    <article>
+      {{ content }}
+    </article>
+  </div>
+
+  <!-- 添加侧边索引导航 -->
+  <div id="side-nav">
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var headings = document.querySelectorAll("article h2, article h3, article h4, article h5, article h6");
+
+        if (headings.length > 0) {
+          headings.forEach(function(heading) {
+            var link = document.createElement("a");
+            link.href = "#" + heading.id;
+
+            // Get the heading level (h2, h3, etc.)
+            var headingLevel = heading.tagName.toLowerCase();
+
+            // Add class to style based on heading level
+            link.classList.add("heading-level-" + headingLevel);
+
+            // Adjust indentation based on heading level
+            var indentation = 10 * (parseInt(headingLevel.charAt(1)) - 1) + "px";
+            link.style.paddingLeft = indentation;
+
+            link.textContent = heading.textContent;
+            document.getElementById("side-nav").appendChild(link);
+          });
+        }
+      });
+    </script>
+  </div>
+</div>
+
+<!-- 引入 jQuery 和 jQuery UI Resizable -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- 启用 jQuery UI Resizable -->
+<script>
+  $(function() {
+    $("#side-nav").resizable({
+      handles: "e",
+      minWidth: 300
+    });
+  });
+</script>
+
+<!-- 其余代码保持不变 -->
+
+
+
 {% if site.hide_post_date != true %}
   {% include post-date.html %}
 {% endif %}
@@ -21,52 +115,26 @@ layout: default
   {% include related-posts.html %}
 {% endif %}
 
+{% if site.disqus_comments != true%}
+  {% include disqus_comments.html %}
+{% endif %} 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script> 
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-DGMSK4G2XJ');
-</script>
+  gtag('config', 'G-DGMSK4G2XJ');</script> 
+
+
+
 <link href="{{ site.github.url }}/assets/css/prism.css" rel="stylesheet" />
 <script src="{{ site.github.url }}/assets/js/prism.js"></script>
 <script src="{{ site.github.url }}/assets/js/update_view.js"></script>
 <script id="dsq-count-scr" src="//https-github-com-xpji-jianpu-github-io.disqus.com/count.js" async></script>
 
 
-{% if site.disqus_comments %}
-  {% include disqus_comments.html %}
-{% endif %}
-
-{\%\if page.tags.size > 0 \%\}
-        <div class="blog-tags">
-          Tags:
-          {\%\if site.link-tags \%\}
-          {\%\for tag in page.tags \%\}
-            <a href="\{\{ '/tags' | relative_url \}\}#\{\{- tag -\}\}">\{\{- tag -\}\}</a>
-          {\%\endfor \%\}
-          {\%\else \%\}
-            \{\{ page.tags | join: ", " \}\}
-          {\%\endif \%\}
-        </div>
-      {\%\endif \%\}
-
-	<!--添加分类-->
-	 {\%\if page.categories.size > 0 \%\}
-		  <div class="blog-tags">
-		  Category：
-		{\%\if post \%\}
-			{\%\assign categories = post.categories \%\}
-		{\%\else \%\}
-			{\%\assign categories = page.categories \%\}
-		{\%\endif \%\}
-		{\%\for category in categories \%\}
-			<a href="\{\{site.baseurl\}\}/categories/#\{\{category|slugize\}\}">\{\{category\}\}</a>
-			{\%\unless forloop.last \%\}&nbsp;{\%\endunless \%\}
-			{\%\endfor \%\}
-		</div>
-	{\%\endif \%\}
