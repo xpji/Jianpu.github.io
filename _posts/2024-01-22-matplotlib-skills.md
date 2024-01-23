@@ -11,15 +11,17 @@ comments: true
 
 
 
-# matplotlib.pyplot的一些绘图命令技巧
+# matplotlib.pyplot
 
-- 设置全局字体
+
+
+## 设置全局字体
 
 ```python
 plt.rcParams['font.family'] = 'Times New Roman',
 ```
 
-- 用来正常显示中文标签
+## 用来正常显示中文标签
 
 
 ```python
@@ -29,7 +31,7 @@ plt.rcParams['font.sans-serif'] = ['SimHei']
 ```
 
 
-- 正常显示负号
+## 正常显示负号
 
 ```python
 
@@ -37,7 +39,7 @@ plt.rcParams['axes.unicode_minus'] = False
 
 ```
 
-- 设置画布大小,子图一行一列第一个
+## 设置画布大小,子图一行一列第一个
 
 ```python
 fig=plt.figure(figsize=(10,6)
@@ -46,7 +48,7 @@ ax=fig.add_subplot(111)
 
 ```
 
-- 设置左轴的颜色
+## 设置左轴的颜色
 
 
 ```python
@@ -56,7 +58,7 @@ ax.spines['left'].set_color ('r')
 ```
 
 
-- 设置y轴ticklabel颜色，外凸，字体大小，y轴标签颜色
+## 设置y轴ticklabel颜色，外凸，字体大小，y轴标签颜色
 
 ```python
 
@@ -73,7 +75,7 @@ ax.tick_params( axis='y',direction='out', colors='red',
 
 
 
-- 设置y轴标签显示范围以及间隔
+## 设置y轴标签显示范围以及间隔
 
 ```python
 
@@ -82,7 +84,7 @@ ax.set_yticks(range(160, 320, 20))
 ```
 
 
-- 共享x轴
+## 共享x轴
 ```python
 
 ax2 = ax.twinx()
@@ -90,7 +92,7 @@ ax2 = ax.twinx()
 ```
 
 
-- 反转y轴
+## 反转y轴
 
 ```python
 
@@ -98,7 +100,7 @@ ax.invert_yaxis()
 
 ```
 
-- 设置x轴的范围
+## 设置x轴的范围
 
 ```python
 
@@ -108,7 +110,7 @@ ax.set_xlim(20,32)
 ```
 
 
-- 为图片添加标题,并设置标题字体大小，位置，离y轴的距离
+## 为图片添加标题,并设置标题字体大小，位置，离y轴的距离
 
 ```python
 
@@ -127,7 +129,7 @@ ax.set_title('units:mm/day',fontsize=14, loc='right',pad=12)
 
 
 
-- 自定义x轴标签，并且使得x、y范围的lim，
+## 自定义x轴标签，并且使得x、y范围的lim，
 
 ```python
 
@@ -152,7 +154,7 @@ ax.set_ylim(0.1,0.31)
 
 
 
-- 使得图像右边和上边没有颜色
+## 使得图像右边和上边没有颜色
 
 ```python
 
@@ -162,7 +164,7 @@ ax.spines['top'].set_color('none')
 ```
 
 
-- 使得colorbar放置在图片最下方，并且设置colorbar的字体大小以及放置方向、保存文件的格式
+## 使得colorbar放置在图片最下方，并且设置colorbar的字体大小以及放置方向、保存文件的格式
 
 ```python
 
@@ -173,14 +175,14 @@ fig.savefig(r'sla_2017_month.png',format='png')
 ```
 
 
-- 修改坐标刻度上的数字字体 -只有一幅图的情况
+## 修改坐标刻度上的数字字体 -只有一幅图的情况
 
 ```python
 
 plt.yticks(fontproperties='Times NewRoman',size=16)
 
 ```
-- 修改坐标刻度上的数字 -有多幅图的情况
+## 修改坐标刻度上的数字 -有多幅图的情况
 
 ```python
 
@@ -191,7 +193,7 @@ ax.set_yticklabels(labels=ylabels,fontdict={'family':'Times NewRoman','size':16}
 ```
 
 
-- 设置colorbar的单位及字体大小\colorbar的一些细节操作，
+## 设置colorbar的单位及字体大小\colorbar的一些细节操作，
 ```python
 
 
@@ -210,7 +212,7 @@ cb.ax.set_title('$m/s$',fontsize=14)
 ```
 
 
-- 设置子图之间的距离
+## 设置子图之间的距离
 
 ```python
 
@@ -219,13 +221,13 @@ plt.subplots_adjust(wspace =0.4, hspace =0.05)
 
 ```
 
-- 带横坐标为经度，带有经度单位
+##  带横坐标为经度，带有经度单位
 
 ```python
 ax.xaxis.set_major_formatter(LongitudeFormatter(zero_direction_label =False))
 ```
 
-- 边框的设置
+## 边框的设置
 
 ```python
 
@@ -239,7 +241,7 @@ plt.grid( color = 'black',linestyle='-.',linewidth = 2)
 
 ```
 
-- 设置边框的粗细、颜色，网格线的颜色、线的类型，线的粗细
+## 设置边框的粗细、颜色，网格线的颜色、线的类型，线的粗细
 
 
 ```python
@@ -299,7 +301,7 @@ ax.spines[['right','left','top','bottom']].set_visible(True)
 
 ```
 
-- 坐标轴消失
+## 坐标轴消失
 
 ```python
 
@@ -307,7 +309,7 @@ ax.set_xticks([])
 
 ```
 
-- 坐标轴的标签不显示
+## 坐标轴的标签不显示
 
 ```python
 
@@ -316,7 +318,7 @@ ax.yaxis.set_ticklabels([])
 ```
 
 
-- 坐标系设置-缩放、对数坐标
+## 坐标系设置-缩放、对数坐标
 
 
 
@@ -332,7 +334,7 @@ ax.set_yscale("symlog")
 
 
 
-- 自定义colorbar
+## 自定义colorbar
 
 
 
@@ -414,7 +416,212 @@ ax2.set_title('colormap',fontsize=15,
 
 
 
-# proplot的一些绘图设置
+# proplot
+
+## 1、创建画板，非投影转换
+
+```bash
+f, axs = pplt.subplots( ncols=1, nrows=1, 
+                       yreverse=True,
+                       share =1,
+                       figsize=(8,6)
+                       )
+创建一个1x1的子图
+ncols代表列
+nrows代表行
+yreverse=True 表示翻转y轴，与matplotlib.pyplot中的ax.invert_yaxis()作用相同
+share=1,2,3,4,False  表示共享横轴、纵轴、colorbar、标题等信息，False表示不共享
+figsize ：设置画板的大小，可以根据需要设置，不添加的话是系统默认的格式
+```
+
+## 2、创建画板，含投影
+
+```bash
+f, ax = pplt.subplots( ncols=1, nrows=1, 
+                        axwidth=5,
+                        refwidth=2,
+                        suptitle='subplot ',
+                       # figsize=(5,4),
+                       proj='cyl',
+                       proj_kw={'lon_0': 180}, lonlim=(100, 200), 
+                             latlim=(-20, 20),
+                       share=4,
+                       )
+与matplotlib.pyplot的创建方式的区别，投影可以直接在创建画板时设置。
+axwidth ：调节画板的清晰度，可能，没怎么用过
+refwidth： 各子图的长宽比
+suptitle：各子图的总标题
+ proj='cyl', 设置为等间距投影
+ proj_kw={'lon_0': 180}, lonlim=(100, 200), 
+                             latlim=(-20, 20),
+                             表示设置中心经度为180°，地图的经度范围是：100E-200E，
+                             纬度范围是：-20S-20N
+```
+
+
+## 3、填色图的命令
+
+```bash
+m=ax.contourf(lon,lat,pre,
+            colorbar='l',
+            cmap = cmap,
+            extend='both',
+            colors=[ 'blue9','blue6','blue4', 'blue2','blue0',
+                        'white','white',
+                        'yellow3','yellow6', 'orange7', 'red8','red9'
+                        ],
+             colorbar_kw={'label': '',
+                             'lw':0.5},
+            levels = np.linspace(-30,30,31)
+            )
+基本的命令和matplot.pyplot类似，多了一些额外的功能
+colorbar='l' ：设置colorbar的显示位置，可以直接在contourf()里面设置了
+extend='both'：设置色标两边的范围为延申形式，没有定死
+lw=0.7  ：如果是绘制等值线的话，可以控制线的粗细
+colors=[ 'blue9','blue6','blue4', 'blue2','blue0',
+                        'white','white',
+                        'yellow3','yellow6', 'orange7', 'red8','red9'
+                        ],   可以自己构建cmap，用colors就不需要使用cmap了
+ colorbar_kw={'label': '',
+                             'lw':0.5},  设置colorbar的label以及线的宽度
+```
+
+
+## 4、带有投影的基本细节属性
+
+```bash
+ax.format(     title='TD-type disturbance structure ',
+                titleloc='l',
+                rtitle='Level:850(hPa)',
+            
+                xformatter=LongitudeFormatter(),
+                xlim=(100,200),
+                xlabel='lon',
+                coast=True, 
+                    labels=True,
+                grid=True,
+              gridlinewidth=0.5,gridalpha=0.2,
+              lonlines=20,
+              latlines=10,
+              rc_kw={'tick.pad': 8}
+                )
+ title='TD-type disturbance structure ', 设置图的标题，标题的位置
+ titleloc='l',
+rtitle='Level:850(hPa)', ：设置图右边的标题，
+ltitle='850(hPa)'  ：  左边的标题同理
+xformatter=LongitudeFormatter(), ：设置x轴的ticklabel为经度的形式
+xlim=(100,200),   设置x轴经度显示的范围
+xlabel='lon',     设置x轴的标签，为：lon
+coast=True,    打开海岸线
+labels=True,   打开x轴和y轴的刻度
+grid=True,     打开网格线
+gridlinewidth=0.5, 设置网格线的宽度
+gridalpha=0.2,     设置网格线的透明度
+lonlines=20,       设置经度的显示间距
+latlines=10,       设置纬度的显示间距
+rc_kw={'tick.pad': 8}  设置ticklabel距离tick的间距，但是在投影的图里好像不起作用
+
+```
+
+## 5、没有投影的基本细节属性，普通绘图的基本属性
+
+```bash
+axs.format(     title='V(m/s) ',
+                titleloc='l',
+                rtitle='Level:950-200(hPa)',
+                xformatter=LongitudeFormatter(),
+                xlim=(100,210),
+                xlabel='',
+                yticks=pplt.arange(0,40,1),
+                grid=True,
+                xticks=10,  ## x 间隔
+                  xtickminor=True, xgridminor=True,
+                  ytickminor=False, ygridminor=True,
+                  rc_kw={'geogrid.alpha':0.3},
+                  xticks=pplt.arange(0,40,4),
+                  fontsize=20,  
+                  xlocator=1, xminorlocator=0.5,
+                  xrotation=20,
+                   yticks=[950, 800,600,500,400,300, 200],
+        yscale='symlog',
+)
+
+与带投影的起始差不了太多，主要就是关于经纬度坐标的设置有些差别
+xticks=10,  ## 设置x轴ticklabel的间隔
+xtickminor=True, xgridminor=True,  打开x轴的ticklabel的最小值，以及网格线的最小值
+ytickminor=False, ygridminor=True,  这个是设置y轴的
+rc_kw={'geogrid.alpha':0.3}  设置网格线的透明度
+xticks=pplt.arange(0,40,4),  设置x轴tick的具体范围
+fontsize=20,    字体的大小   
+ xrotation=20,     xticklabel的旋转的角度
+  yticks=[]     设置yticks的具体显示数值
+  yscale='symlog',   设置y轴的缩放形式，一般画垂向分布的时候用
+```
+
+## 6、绘制普通折线图plot
+
+```bash
+ax.plot(x,y,label='dpdy',legend='ur')
+
+label='dpdy',  设置y轴的坐标
+legend='ur'    设置图例在右上方，在绘图的时候可以直接设置，
+
+```
+
+
+
+
+## 7、一些其他小技巧
+
+```bash
+ax.axvline(x=18, color='grey', linewidth=1.5,linestyle='-.')  
+绘制一条垂直线， 颜色为灰色，lw表示线的宽度，ls为线的风格
+ax.axhline(y=0, color='grey', linewidth=1.5,linestyle='--') 
+绘制一条水平线，
+ox = ax.alty(color='blue8', linewidth=1)
+lns2=ox.plot(x,dm2,color='blue8',
+              label=r'$-V \cdot \nabla P$')
+共用x轴，绘制一条折线
+ox2 = ax.twinx( yloc=('axes', 1.05),  color='green4', linewidth=1)
+lns3=ox2.plot(x,dm3*10**11,color='green4', 
+              label=r'$-\omega \frac{\partial P}{\partial p}$',)
+还是共享x轴绘制一条折线，但是这个y轴不在图上
+lns = lns1+lns2+lns3+lns4
+labs = [l.get_label() for l in lns]
+ax.legend(lns, labs,loc='ul',ncols=2, center=False, frame=True)
+将共享同一条x轴的折线的y轴的图例画在同一个框内，不然就是四个不同的图例了
+
+ax.bar(x,datay.T*10**11,
+       0.2,
+       cycle=['c','blue','red6'],
+        label=['MRG','TD','TC'],
+        edgecolor='grey',
+        legend='ul',
+         colorbar_kw={'frameon': False}
+  color=np.where(y>0,'tomato','tab:blue'), #判断大于0的为红色，负的为蓝色
+          )
+将三个不同的数据的柱形图画在同一个子图上，
+三个柱形图的颜色不同，名称也不同，图例的位置为左上角
+
+
+ax.text(9,0.85,'MRG',bbox=True,bordercolor='w',
+        borderstyle='miter', 
+        bboxcolor='w', 
+        bboxstyle='square', bboxalpha=0.5, )
+在图上添加text ，设置边缘颜色等
+
+ axs[i,j].scatter(lon_center[i,j],875,marker='v',
+                         markersize=150,
+                         c='red9',
+                         alpha=0.8,
+                         zorder=2)
+  绘制散度图的一些命令
+
+
+ax.format()
+可以用来设置全局的坐标属性等，如果存在子图的画，也可以指定某个子图设置属性
+```
+## 8、循环绘制多子图（带有投影）
 
 ```python
 proj = pplt.Proj('cyl',lon_0=180,)
@@ -490,9 +697,9 @@ ds.to_netcdf(r'D:/ERA-Interim/divergence/divergence.nc')
 ```
 
 
-# 快速绘图
+# 快速绘图模板
 
-- lon-lat & level quickly plots
+## lon-lat & level quickly plots
 
 ```python
 
@@ -580,4 +787,102 @@ ax_2.yaxis.set_ticklabels([])
 
 
 ```
+
+# pandas库的一些使用教程
+
+## 1、读取xlsx文件
+
+- pd.read_excel(path)
+  - 在次之前你需要按照pandas 、openpxl 、xlrd
+
+## 2、去掉nan值
+
+```python
+df = pd.read_excel(path)
+df = df.dropna()
+```
+
+## 3、取出符合条件的数据
+
+```python
+df = df[(df['TEMP'] > -50) & (df['TEMP'] < 50)]
+```
+
+## 4、将时间为object格式的数据转换为datatime64  
+
+**2016-01-24 23:00:00**
+
+- 下述命令还会生成一个新的columns名称为：datatime
+
+```python
+df['datetime'] = pd.to_datetime(df['TIME'])
+```
+
+## 5、计算两个数据的直接的差值
+
+- **diff(-1)** : 使用当前时刻的值减去后一个时刻的值。
+
+- 直接**diff()**，是计算当前时刻与前一个时刻的差
+
+```python
+df['temp_grad']=df['TEMP'].diff()
+```
+
+## 6、去掉某一列的所有值
+
+```python
+df = df.drop(columns='temp_gradient')
+```
+
+## 7、找到符合条件的数据，对应的索引
+
+```python
+index = np.where((df['TEMP'] < 4) & (df['temp_grad'] <=-10))
+```
+
+## 8、按照指定的一列进行分类
+
+```python
+for name, group in df.groupby(['STNM']):
+
+     print(name,group)
+```
+
+# Ai 快捷键学习
+
+
+
+## 1、Ait + 鼠标滚轮
+
+实现页面的放大和缩小
+
+## 2、空格+鼠标左键
+
+抓手工具
+
+## 3、ctrl + r
+
+调出标尺，可以通过标尺来对其图片
+
+## 4、ctrl + ； 
+
+隐藏标尺
+
+## 5、ctrl + ‘
+
+调用网格标尺
+
+再按一次就是取削
+
+## 6、ctrl +shift+z
+
+反向撤回
+
+## 7、tab
+
+快速全屏
+
+## 8、ctsl+s / ctrl+shift+s
+
+保存
 

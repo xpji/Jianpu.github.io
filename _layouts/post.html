@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <style>
   /* 添加这个样式以移除边框 */
   .panel-group,
@@ -10,32 +11,30 @@ layout: default
     border: none;
   }
 
-  /* 样式调整，使文章内容呈现在左边 */
-  #content-wrapper {
-    display: flex;
-    flex-wrap: wrap; /* Allow content to wrap to the next line on small screens */
-  }
-
-  #main-content {
-    flex: 1; /* Take up remaining space */
-    max-width: 100%;
-  }
-
+  /* 添加样式以调整侧边索引导航的样式 */
   #side-nav {
-    max-width: 100%;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    /* 设置初始宽度 */
+    width: 150px;
+    overflow: auto;
   }
 
   #side-nav a {
     display: block;
     margin-bottom: 10px;
-    max-width: 100%;
     white-space: nowrap;
+    max-width: 140%;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 15px;
+    max-width: 40ch;
   }
 </style>
-
 
 <div id="content-wrapper">
   <div id="main-content">
@@ -50,35 +49,30 @@ layout: default
     </article>
   </div>
 
-  <!-- 添加侧边索引导航 -->
-  <div id="side-nav">
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var headings = document.querySelectorAll("article h2, article h3, article h4, article h5, article h6");
-
-        if (headings.length > 0) {
-          headings.forEach(function(heading) {
-            var link = document.createElement("a");
-            link.href = "#" + heading.id;
-
-            // Get the heading level (h2, h3, etc.)
-            var headingLevel = heading.tagName.toLowerCase();
-
-            // Add class to style based on heading level
-            link.classList.add("heading-level-" + headingLevel);
-
-            // Adjust indentation based on heading level
-            var indentation = 10 * (parseInt(headingLevel.charAt(1)) - 1) + "px";
-            link.style.paddingLeft = indentation;
-
-            link.textContent = heading.textContent;
-            document.getElementById("side-nav").appendChild(link);
-          });
-        }
-      });
-    </script>
-  </div>
+  
+<!-- 添加侧边索引导航 -->
+<div id="side-nav">
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var headings = document.querySelectorAll("article h2, article h3, article h4, article h5, article h6");
+      
+      if (headings.length > 0) {
+        headings.forEach(function(heading) {
+          var link = document.createElement("a");
+          link.href = "#" + heading.id;
+          
+          // 根据标题的级别设置不同的缩进
+          var level = parseInt(heading.tagName.charAt(1), 10) - 1;
+          link.style.marginLeft = level * 20 + "px";
+          
+          link.textContent = heading.textContent;
+          document.getElementById("side-nav").appendChild(link);
+        });
+      }
+    });
+  </script>
 </div>
+
 
 <!-- 引入 jQuery 和 jQuery UI Resizable -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -94,57 +88,26 @@ layout: default
   });
 </script>
 
-<!-- 其余代码保持不变 -->
 
-<style>
-  /* 添加响应式样式 */
-  @media (max-width: 768px) {
-    #content-wrapper {
-      flex-direction: column; /* Stack items vertically on small screens */
-    }
+  <!-- Include other components -->
+  {% if site.hide_post_date != true %}
+    {% include post-date.html %}
+  {% endif %}
+  {% if site.hide_post_share != true %}
+    {% include social-sharing.html %}
+  {% endif %}
+  {% if site.hide_related_posts != true %}
+    {% include related-posts.html %}
+  {% endif %}
 
-    #side-nav {
-      width: 100%; /* Make the side nav take full width on small screens */
-      max-width: none;
-    }
+  {% if site.disqus_comments != true%}
+    {% include disqus_comments.html %}
+  {% endif %} 
 
-    #main-content {
-      max-width: 100%; /* Adjust main content width on small screens */
-    }
-  }
-</style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script> 
 
-
-{% if site.hide_post_date != true %}
-  {% include post-date.html %}
-{% endif %}
-{% if site.hide_post_share != true %}
-  {% include social-sharing.html %}
-{% endif %}
-{% if site.hide_related_posts != true %}
-  {% include related-posts.html %}
-{% endif %}
-
-{% if site.disqus_comments != true%}
-  {% include disqus_comments.html %}
-{% endif %} 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGMSK4G2XJ"></script> 
-
-<!-- 
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DGMSK4G2XJ');</script>  -->
-
-
-
-<link href="{{ site.github.url }}/assets/css/prism.css" rel="stylesheet" />
-<script src="{{ site.github.url }}/assets/js/prism.js"></script>
-<script src="{{ site.github.url }}/assets/js/update_view.js"></script>
-<script id="dsq-count-scr" src="//https-github-com-xpji-jianpu-github-io.disqus.com/count.js" async></script>
-
-
+  <link href="{{ site.github.url }}/assets/css/prism.css" rel="stylesheet" />
+  <script src="{{ site.github.url }}/assets/js/prism.js"></script>
+  <script src="{{ site.github.url }}/assets/js/update_view.js"></script>
+  <script id="dsq-count-scr" src="//https-github-com-xpji-jianpu-github-io.disqus.com/count.js" async></script>
+</div>
