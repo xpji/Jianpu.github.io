@@ -111,19 +111,19 @@ comments: true
 
 打开 clustrmaps.com 输入你的网站
 
-![image.png](https://s2.loli.net/2024/01/23/N9MOdToY8IyEhbx.png)
+![image.png](E:/picgo/imga_copy/N9MOdToY8IyEhbx.png)
 
 
 ## 注册账户
 
 如果没有注册过的，需要注册账户
 
-![image.png](https://s2.loli.net/2024/01/23/EXd1HKYLvicWP34.png)
+![image.png](E:/picgo/imga_copy/EXd1HKYLvicWP34.png)
 
 ## 选择需要的地图类型
 
 
-![image.png](https://s2.loli.net/2024/01/23/SAzFsK3X8iGceNp.png)
+![image.png](E:/picgo/imga_copy/SAzFsK3X8iGceNp.png)
 
 
 根据喜好自由选择上述地图类型
@@ -134,7 +134,7 @@ comments: true
 
 如果你选择的是第一种 Map widget，会得到如下代码，选择你的footer.html 进行放置。也可以自定义放置在任意位置
 
-![image.png](https://s2.loli.net/2024/01/23/MBZNTV4hbtfOgJX.png)
+![image.png](E:/picgo/imga_copy/MBZNTV4hbtfOgJX.png)
 
 
 
@@ -142,4 +142,4 @@ comments: true
 
 部署后，再次点开clustrmaps.com ，可以检查自己的部署情况
 
-![image.png](https://s2.loli.net/2024/01/23/PDsy7qwkQCO2Fxi.png)
+![image.png](E:/picgo/imga_copy/PDsy7qwkQCO2Fxi.png)
