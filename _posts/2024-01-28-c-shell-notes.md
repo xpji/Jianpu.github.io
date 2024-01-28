@@ -50,7 +50,6 @@ echo $d
 echo $d[6]-$d[2]-$d[3]
 ```
 
-![image-20220709162849023](E:\picgo\imga_copy\image-20220709162849023.png)
 
 
 
