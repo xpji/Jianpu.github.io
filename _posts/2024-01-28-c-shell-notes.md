@@ -193,7 +193,7 @@ echo ${ret}
 
 
 
-# # cshell 命令语法
+#  cshell 命令语法
 
 ## 1.if / then / else
 
