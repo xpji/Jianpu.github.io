@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WRF: Interpolation of curvilinear  gird to  rectilinear gird"
+title: "WRF: Interpolation of curvilinear gird to  rectilinear gird"
 author: Jianpu
 categories: WRF
 tags: [interp]
@@ -85,8 +85,6 @@ end
 ```
 
 - 上述脚本的缺点在于只能基于模式模拟的经纬度区域进行插值，意思就是说他的经纬度区域是固定的那么大
-
-
 
 
 ## method：NCL-2
