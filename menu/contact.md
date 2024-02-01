@@ -16,3 +16,6 @@ Email:    | Xianpu_JI2024@outlook.com
 Office:   | Electrical Building 304
 
 ![Alt text](https://xpji.github.io/Jianpu.github.io/assets/img/tree.jpg)
+
+---
+![Alt text](https://xpji.github.io/Jianpu.github.io/assets/img/person.jpg)

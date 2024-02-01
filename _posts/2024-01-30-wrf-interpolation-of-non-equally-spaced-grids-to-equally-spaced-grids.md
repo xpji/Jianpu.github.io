@@ -16,7 +16,6 @@ wrf模拟的数据一般是**非等间距的网格，需要先将数据进行插
 
 
 
-
 举个例子，如果模式中设置为兰伯特投影的网格：
 - curvilinear  gird
 
@@ -28,7 +27,6 @@ curvilinear  gird to  rectilinear
 - rectilinear  gird
 
 ![image.png](https://s2.loli.net/2024/01/27/EKOIlFBy49fni5d.png)
-
 
 
 
@@ -87,7 +85,7 @@ end
 - 上述脚本的缺点在于只能基于模式模拟的经纬度区域进行插值，意思就是说他的经纬度区域是固定的那么大
 
 
-## method：NCL-2
+## method：NCL-2 
 
 NCL还有一个函数可以实现上述过程，就是`ESMF_regrid`，该函数的优点在于可以实现任意经纬度范围的插值，但是不足在于对于存在高度层的变量，暂时无法进行高度层的数据读取。（也可能我水平有限不知道。。。。）这里也附上脚本：
 
