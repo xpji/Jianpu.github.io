@@ -3,7 +3,7 @@ layout: post
 title:  "地图上嵌入子图"
 author: "Jianpu"
 date:   2024-01-01 19:48
-category: WRF
+category: Python
 tags: [Python,cartopy]
 image: 2.webp
 views: 0

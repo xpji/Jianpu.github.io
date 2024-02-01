@@ -2,7 +2,7 @@
 layout: post
 title: "python station interp"
 author: Jianpu
-categories: python
+categories: Python
 tags: [data process]
 image: 25.jpg
 date: 2024-01-31 17:32
