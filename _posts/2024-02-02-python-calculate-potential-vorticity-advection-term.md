@@ -2,13 +2,12 @@
 layout: post
 title: "python calculate potential vorticity advection term"
 author: Jianpu
-categories: python
+categories: Python
 tags: [data calculation]
 image: 27.jpg
 date: 2024-02-02 17:37
 comments: true
 ---
-
 
 # 使用python 计算位涡水平平流项
 
