@@ -5,7 +5,7 @@ author: "Jianpu"
 date:   2024-01-10 13:48
 category: WRF
 tags: [WRF]
-image: 7.jpg
+image: wrf.jpg
 views: 0
 comments: True
 ---

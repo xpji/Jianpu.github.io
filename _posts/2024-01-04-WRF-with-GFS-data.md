@@ -5,7 +5,7 @@ author: "Jianpu"
 date:   2024-01-03 19:48
 category: WRF
 tags: [WRF,GFS]
-image: 1.webp
+image: wrf.jpg
 views: 0
 comments: true
 ---

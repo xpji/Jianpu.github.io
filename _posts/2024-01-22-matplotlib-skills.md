@@ -4,7 +4,7 @@ title: "matplotlib skills"
 author: Jianpu
 category: Python
 tags: [matplotlib]
-image: 16.jpg
+image: python.jpg
 date: 2024-01-22 20:36
 comments: true
 ---

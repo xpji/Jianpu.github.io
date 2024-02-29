@@ -5,7 +5,7 @@ author: "Jianpu"
 date:   2023-12-11 12:48
 category: WRF
 tags: [WRF,namelist.input]
-image: forest.jpg
+image: wrf.jpg
 views: 0
 comments: true
 ---

@@ -4,7 +4,7 @@ title: "WRF&WPS:namelist notes"
 author: Jianpu
 categories: WRF
 tags: [命令参数说明]
-image: 29.jpg
+image: wrf.jpg
 date: 2024-02-03 13:54
 comments: true
 ---

@@ -4,7 +4,7 @@ title: "WRF: Interpolation of curvilinear gird to  rectilinear gird"
 author: Jianpu
 categories: WRF
 tags: [interp]
-image: 19.jpg
+image: wrf.jpg
 date: 2024-01-30 16:43
 comments: true
 ---

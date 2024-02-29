@@ -5,7 +5,7 @@ author: "Jianpu"
 date:   2024-01-01 19:48
 category: Python
 tags: [Python,cartopy]
-image: 2.webp
+image: python.jpg
 views: 0
 comments: true
 ---
