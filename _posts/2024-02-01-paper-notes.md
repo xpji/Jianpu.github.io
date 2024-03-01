@@ -4,7 +4,7 @@ title: "paper notes"
 author: Jianpu
 categories: paper
 tags: [notes]
-image: 33.jpg
+image: study.jpeg
 date: 2024-02-01 15:13
 comments: true
 ---
